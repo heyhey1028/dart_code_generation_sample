@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug sample watch",
+        "request": "launch",
+        "program": "example/.dart_tool/build/entrypoint/build.dart",
+        "type": "dart",
+        "args": ["watch", "--delete-conflicting-outputs"]
+      }
+    ]
+  }

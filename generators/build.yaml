@@ -1,0 +1,16 @@
+# 9: setup build.yaml
+targets:
+  $default:
+    builders:
+      generators|annotations:
+        enabled: true
+
+builders:
+  generators:
+    target: ":generators"
+    import: "package:generators/generators.dart"
+    builder_factories: ["jsonBuilder"]
+    build_extensions: {".dart": [".json_builder.g.dart"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
